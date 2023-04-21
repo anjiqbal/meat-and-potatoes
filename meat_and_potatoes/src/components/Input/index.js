@@ -1,7 +1,7 @@
 import App from "../App/App";
 import {useState} from "react";
 
-export default function Input(){
+export default function Input({getIngredient}){
     const [ingredient, setIngredient] = useState("");
 
     function handleIngredient(input) {
@@ -13,7 +13,8 @@ export default function Input(){
         <input type ="text" onChange={(event) => {
             handleIngredient(event.target.value)
         }}/>
-        <button>Search</button>
+        <button onClick={()=>{getIngredient(ingredient); console.log(ingredient)}}>Search</button>
+        
 
         </>
     )
