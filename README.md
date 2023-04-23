@@ -6,7 +6,7 @@ A React app that allows a user to type in an ingredient and recieve recipes cont
 
 ## Screenshots
 
-![Meat & Potatoes screenshot](./images/meat_and_potatoes.png)
+![Meat & Potatoes screenshot](.meat_and_potatoes/images/meat_and_potatoes.png)
 ![Meat & Potatoes gif](./images/meat_and_potatoes.gif)
 
 ## Motivation
