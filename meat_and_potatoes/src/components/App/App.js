@@ -17,8 +17,8 @@ function App() {
         `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`
       );
       const data = await res.json();
-      console.log(data);
-      setRecipeList(data);
+      setRecipeList(data.meals);
+      console.log(recipeList);
     }
     fetchdata();
   }, [ingredient]);

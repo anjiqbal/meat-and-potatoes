@@ -1,28 +1,36 @@
-import App from "../App/App";
 import { useState } from "react";
 
 export default function Input({ getIngredient }) {
   const [ingredient, setIngredient] = useState("");
 
-  function handleIngredient(input) {
-    setIngredient(input);
+  function handleIngredient(event) {
+    setIngredient(event.target.value);
   }
+
+  function handleKeyDown(event) {
+    if (event.key === "Enter") {
+      getIngredient(ingredient);
+      setIngredient("");
+    }
+  }
+  function handleClick(event) {
+    event.preventDefault();
+    getIngredient(ingredient);
+    setIngredient("");
+  }
+
   return (
-    <>
+    <form onSubmit={handleClick}>
       <input
         type="text"
+        value={ingredient}
+        placeholder="Enter ingredient..."
         onChange={(event) => {
-          handleIngredient(event.target.value);
+          handleIngredient(event);
         }}
+        onKeyDown={handleKeyDown}
       />
-      <button
-        onClick={() => {
-          getIngredient(ingredient);
-          console.log(ingredient);
-        }}
-      >
-        Search
-      </button>
-    </>
+      <button type={"submit"}>Search</button>
+    </form>
   );
 }
