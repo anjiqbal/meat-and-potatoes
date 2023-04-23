@@ -12,6 +12,7 @@ function ListItem({
   const [showRecipe, setShowRecipe] = useState(false);
   return (
     <li
+      className="listItem"
       onClick={() => {
         onClick();
         setShowIngredients(!showIngredients);
@@ -20,15 +21,20 @@ function ListItem({
     >
       <h3>{recipeName}</h3>
       <img src={imgUrl} alt="a meal" />
-      {showInstructions && showRecipe && <p>{instructions}</p>}
-
-      {showIngredients && (
-        <ul>
-          {ingredients.map((ingredient) => {
-            return <li key={ingredient}>{ingredient}</li>;
-          })}
-        </ul>
-      )}
+      <div className="instructions">
+        {showIngredients && (
+          <ul className="ingredientsList">
+            {ingredients.map((ingredient) => {
+              return (
+                <li className="ingredientItem" key={ingredient}>
+                  {ingredient}
+                </li>
+              );
+            })}
+          </ul>
+        )}
+        {showInstructions && showRecipe && <p>{instructions}</p>}
+      </div>
     </li>
   );
 }
