@@ -38,9 +38,6 @@ export default function RecipeList({ recipeList }) {
 
     setIngredients(ingredients);
   }
-  useEffect(() => {
-    console.log(ingredients);
-  }, [ingredients]);
 
   return (
     <div>

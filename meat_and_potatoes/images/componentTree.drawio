@@ -1,14 +1,14 @@
 <mxfile host="65bd71144e">
     <diagram id="cl0-9PB4Y_ykcrr7Aixt" name="Page-1">
-        <mxGraphModel dx="868" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="2101" dy="495" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="18" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4" target="12" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="RecipeList&lt;br&gt;Props: array state" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="390" y="200" width="120" height="60" as="geometry"/>
+                <mxCell id="4" value="RecipeList&lt;br&gt;Props: recipe array state" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="360" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="8" target="4" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -17,25 +17,43 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" value="App" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="390" y="30" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="290" y="190" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="Input&lt;br&gt;Props: function onSubmit=handleClick" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="580" y="200" width="160" height="60" as="geometry"/>
+                <mxCell id="11" value="Input&lt;br&gt;Props: function getIngredient" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="360" width="160" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="ListItem&lt;br&gt;Props: recipe" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="390" y="360" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="290" y="560" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="*state* array of objects from API" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="45" width="140" height="30" as="geometry"/>
+                <mxCell id="13" value="*state* array of recipes from API" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="175" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="Behaviour:&lt;br&gt;function handleClick" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="530" y="45" width="140" height="30" as="geometry"/>
+                <mxCell id="14" value="Behaviour:&lt;br&gt;function getIngredient" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="205" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" value="*state* ingredientText" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="740" y="180" width="140" height="30" as="geometry"/>
+                    <mxGeometry x="640" y="340" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="17" value="Behaviour:&lt;br&gt;onChange - take in ingredient" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-                    <mxGeometry x="740" y="210" width="140" height="80" as="geometry"/>
+                    <mxGeometry x="640" y="370" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="*state* ingredient string(search for recipe)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="210" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Behaviour:&lt;br&gt;onSubmit - call getIngredient and pass ingredientText" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="430" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="*state* selectedRecipe" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="350" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="*state* recipeInstructions" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="380" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="*state* ingredients" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="130" y="410" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Behaviour:&lt;br&gt;handleClick&lt;br&gt;fetchInstructions&lt;br&gt;createIngredientsArray" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-10" y="360" width="140" height="80" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
