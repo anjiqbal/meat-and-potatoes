@@ -7,7 +7,7 @@ A React app that allows a user to type in an ingredient and recieve recipes cont
 ## Screenshots
 
 ![Meat & Potatoes screenshot](./meat_and_potatoes/images/meat_and_potatoes.png)
-![Meat & Potatoes gif](./images/meat_and_potatoes.gif)
+![Meat & Potatoes gif](./meat_and_potatoes/images/meat_and_potatoes.gif)
 
 ## Motivation
 
@@ -58,3 +58,6 @@ Potential future improvements:
 2. Click on a meal to expand it to see ingredients and recipes. Click on it again to close it.
 
 ## Collaborators
+
+@evangelineamoura
+@covchris
