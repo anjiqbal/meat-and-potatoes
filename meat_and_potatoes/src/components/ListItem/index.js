@@ -1,8 +1,15 @@
-function ListItem({ recipe }) {
+function ListItem({
+  recipeName,
+  imgUrl,
+  onClick,
+  showInstructions,
+  instructions,
+}) {
   return (
-    <li>
-      <h2>{recipe.strMeal}</h2>
-      <img src={recipe.strMealThumb} alt="a meal" />
+    <li onClick={onClick}>
+      <h3>{recipeName}</h3>
+      <img src={imgUrl} alt="a meal" />
+      {showInstructions && <p>{instructions}</p>}
     </li>
   );
 }
