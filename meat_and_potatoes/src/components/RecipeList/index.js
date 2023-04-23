@@ -31,7 +31,7 @@ export default function RecipeList({ recipeList }) {
         recipe[`strIngredient${i}`].trim() !== ""
       ) {
         ingredients.push(
-          `${recipe[`strIngredient${i}`]} - ${recipe[`strMeasure${i}`]}`
+          `${recipe[`strMeasure${i}`]} ${recipe[`strIngredient${i}`]}`
         );
       }
     }
