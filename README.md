@@ -59,5 +59,5 @@ Potential future improvements:
 
 ## Collaborators
 
-@evangelineamoura
-@covchris
+[![](https://github.com/evangelineamoura.png?size=50)](https://github.com/evangelineamoura)
+[![](https://github.com/covchris.png?size=50)](https://github.com/covchris)
