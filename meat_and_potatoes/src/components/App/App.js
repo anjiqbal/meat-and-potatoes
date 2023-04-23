@@ -14,12 +14,15 @@ function App() {
 
   useEffect(() => {
     async function fetchdata() {
-      const res = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`
-      );
-      const data = await res.json();
-      setRecipeList(data.meals);
-      console.log(recipeList);
+      if (ingredient !== "") {
+        const res = await fetch(
+          `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`
+        );
+        const data = await res.json();
+        setRecipeList(data.meals);
+      } else {
+        setRecipeList([]);
+      }
     }
     fetchdata();
   }, [ingredient]);

@@ -4,6 +4,7 @@ import ListItem from "../ListItem";
 export default function RecipeList({ recipeList }) {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const [recipeInstructions, setRecipeInstructions] = useState("");
+  const [ingredients, setIngredients] = useState([]);
 
   useEffect(() => {
     async function fetchInstructions(id) {
@@ -12,6 +13,7 @@ export default function RecipeList({ recipeList }) {
       );
       const data = await res.json();
       setRecipeInstructions(data.meals[0].strInstructions);
+      createIngredientsArray(data.meals[0]);
     }
     if (selectedRecipe) {
       fetchInstructions(selectedRecipe.id);
@@ -21,6 +23,24 @@ export default function RecipeList({ recipeList }) {
   function handleClick(id) {
     setSelectedRecipe({ id });
   }
+  function createIngredientsArray(recipe) {
+    const ingredients = [];
+    for (let i = 1; i <= 20; i++) {
+      if (
+        recipe[`strIngredient${i}`] &&
+        recipe[`strIngredient${i}`].trim() !== ""
+      ) {
+        ingredients.push(
+          `${recipe[`strIngredient${i}`]} - ${recipe[`strMeasure${i}`]}`
+        );
+      }
+    }
+
+    setIngredients(ingredients);
+  }
+  useEffect(() => {
+    console.log(ingredients);
+  }, [ingredients]);
 
   return (
     <div>
@@ -38,6 +58,7 @@ export default function RecipeList({ recipeList }) {
               showInstructions={showInstructions}
               instructions={recipeInstructions}
               imgUrl={strMealThumb}
+              ingredients={ingredients}
               onClick={() => {
                 handleClick(idMeal);
               }}
